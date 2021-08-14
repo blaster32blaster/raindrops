@@ -1,6 +1,8 @@
 <?php
 
-include_once './src/Main.php';
+require __DIR__.'/vendor/autoload.php';
+
+use src\Main;
 
 $queryString = $_GET['number'];
 isset($queryString) ?

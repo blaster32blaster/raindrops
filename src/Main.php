@@ -1,6 +1,8 @@
 <?php
 
-include_once 'Raindrop.php';
+namespace src;
+
+use src\Raindrop;
 
 class Main
 {
