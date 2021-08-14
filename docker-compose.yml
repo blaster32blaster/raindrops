@@ -1,0 +1,26 @@
+version: "3.2"
+services:
+    #PHP with apache
+    rain_container:
+      #image will be built by processing the Dockerfile in this path
+      build: .
+      container_name: rain_cont
+      command:
+        sh ./dock-files/startup.sh
+      environment:
+        XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_enable=1
+      volumes:
+        - ./:/var/www/html
+      restart:
+        always
+      networks:
+        - traefik_webgateway
+        - internal
+      ports:
+        - "8078:80"
+networks:
+  traefik_webgateway:
+    external: true
+  internal:
+    external: true
+

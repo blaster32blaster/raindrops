@@ -1,0 +1,24 @@
+{
+    "description": "",
+    "name": "santore/sandbox",
+    "require": {
+        "sendgrid/sendgrid": "^7.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sandbox\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sandbox\\Tests\\Unit\\": "tests/Unit",
+            "Sandbox\\Tests\\Integration\\": "tests/Integration"
+        }
+    }
+}
